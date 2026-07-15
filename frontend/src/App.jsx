@@ -1,6 +1,6 @@
 ﻿import { useState, useRef, useEffect } from "react";
 
-const API = "http://127.0.0.1:8000";
+const API = process.env.REACT_APP_API_URL;
 
 const T = {
   background: "#0D0D0F",
