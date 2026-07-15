@@ -1,0 +1,18 @@
+export const T = {
+  navy: "#0A0F1E",
+  navyMid: "#111827",
+  navyLight: "#1A2235",
+  border: "#1E2D45",
+  teal: "#00C9B1",
+  tealDim: "rgba(0,201,177,0.12)",
+  tealGlow: "rgba(0,201,177,0.25)",
+  red: "#FF4D6D",
+  redDim: "rgba(255,77,109,0.12)",
+  amber: "#FFB547",
+  amberDim: "rgba(255,181,71,0.12)",
+  violet: "#A78BFA",
+  violetDim: "rgba(167,139,250,0.12)",
+  white: "#F0F4FF",
+  muted: "#6B7FA3",
+  mutedLight: "#8A9CC0",
+};
