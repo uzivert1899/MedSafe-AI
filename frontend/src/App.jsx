@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+ï»¿import { useState, useRef, useEffect } from "react";
 
 const API = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 
@@ -597,7 +597,7 @@ const AgentTimeline = ({ agentStage }) => {
             >
               {a}
               {status === "active" && (
-                <span style={{ color: T.textMuted }}> · thinking…</span>
+                <span style={{ color: T.textMuted }}> ï¿½ thinkingï¿½</span>
               )}
             </span>
           </div>
@@ -1116,8 +1116,8 @@ export default function App() {
               >
                 {loading.lab
                   ? deepMode
-                    ? "Agents reasoning…"
-                    : "Analyzing…"
+                    ? "Agents reasoningï¿½"
+                    : "Analyzingï¿½"
                   : "Run analysis ?"}
               </button>
 
@@ -1152,7 +1152,7 @@ export default function App() {
                           : "none",
                     }}
                   >
-                    {loading.med ? "Checking…" : "Check interactions ?"}
+                    {loading.med ? "Checkingï¿½" : "Check interactions ?"}
                   </button>
                 </>
               )}
@@ -1760,7 +1760,7 @@ export default function App() {
                           fontFamily: "'Inter',sans-serif",
                         }}
                       >
-                        Generated {new Date().toLocaleDateString()} ·{" "}
+                        Generated {new Date().toLocaleDateString()} ï¿½{" "}
                         {labResult.filename}
                       </p>
                     </div>
