@@ -1,6 +1,6 @@
-﻿import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 
-const API = process.env.REACT_APP_API_URL;
+const API = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 
 const T = {
   background: "#0D0D0F",
@@ -335,7 +335,7 @@ const MedBadge = ({ name, info }) => (
             fontFamily: "'Inter',sans-serif",
           }}
         >
-          <strong>⚠ </strong>
+          <strong>? </strong>
           {info.warnings}
         </p>
       )}
@@ -442,7 +442,7 @@ const AIOutputCard = ({
             fontFamily: "'Inter',sans-serif",
           }}
         >
-          {isError ? `⏳ ${clean.replace("Agent error: ", "")}` : displayed}
+          {isError ? `? ${clean.replace("Agent error: ", "")}` : displayed}
         </div>
       )}
     </Card>
@@ -597,7 +597,7 @@ const AgentTimeline = ({ agentStage }) => {
             >
               {a}
               {status === "active" && (
-                <span style={{ color: T.textMuted }}> · thinking…</span>
+                <span style={{ color: T.textMuted }}> � thinking�</span>
               )}
             </span>
           </div>
@@ -853,7 +853,7 @@ export default function App() {
                 fontFamily: "'Inter',sans-serif",
               }}
             >
-              ← New analysis
+              ? New analysis
             </button>
           )}
         </div>
@@ -1071,7 +1071,7 @@ export default function App() {
                     fontFamily: "'Inter',sans-serif",
                   }}
                 >
-                  {deepMode ? "🧠 Deep agent mode" : "⚡ Quick mode"}
+                  {deepMode ? "?? Deep agent mode" : "? Quick mode"}
                 </span>
                 <div
                   style={{
@@ -1116,9 +1116,9 @@ export default function App() {
               >
                 {loading.lab
                   ? deepMode
-                    ? "Agents reasoning…"
-                    : "Analyzing…"
-                  : "Run analysis →"}
+                    ? "Agents reasoning�"
+                    : "Analyzing�"
+                  : "Run analysis ?"}
               </button>
 
               {labResult && (
@@ -1152,7 +1152,7 @@ export default function App() {
                           : "none",
                     }}
                   >
-                    {loading.med ? "Checking…" : "Check interactions →"}
+                    {loading.med ? "Checking�" : "Check interactions ?"}
                   </button>
                 </>
               )}
@@ -1680,7 +1680,7 @@ export default function App() {
                         boxShadow: GLOW.teal,
                       }}
                     >
-                      Generate final report →
+                      Generate final report ?
                     </button>
                   </div>
                 )}
@@ -1695,7 +1695,7 @@ export default function App() {
                       fontFamily: "'Space Grotesk',sans-serif",
                     }}
                   >
-                    🩺 Show this to your doctor
+                    ?? Show this to your doctor
                   </p>
                   <p
                     style={{
@@ -1760,7 +1760,7 @@ export default function App() {
                           fontFamily: "'Inter',sans-serif",
                         }}
                       >
-                        Generated {new Date().toLocaleDateString()} ·{" "}
+                        Generated {new Date().toLocaleDateString()} �{" "}
                         {labResult.filename}
                       </p>
                     </div>
@@ -1781,7 +1781,7 @@ export default function App() {
                       boxShadow: GLOW.teal,
                     }}
                   >
-                    ⬇ Export / Print
+                    ? Export / Print
                   </button>
                 </Card>
 
@@ -1967,7 +1967,7 @@ export default function App() {
                       fontFamily: "'Space Grotesk',sans-serif",
                     }}
                   >
-                    🩺 Bring this report to your next doctor's visit
+                    ?? Bring this report to your next doctor's visit
                   </p>
                   <p
                     style={{
@@ -1998,7 +1998,7 @@ export default function App() {
                       fontFamily: "'Inter',sans-serif",
                     }}
                   >
-                    ← Start a new analysis
+                    ? Start a new analysis
                   </button>
                 </div>
               </div>
